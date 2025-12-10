@@ -1,8 +1,6 @@
 package com.telusko.springbootrest.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 
@@ -12,7 +10,9 @@ import lombok.Data;
 public class User {
 	
     @Id
-	private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+	private Integer id;
 	private String username;
 	private String password;
 	
